@@ -11,6 +11,9 @@ fun main() {
     val score = 90
 
     println("Nama: $name, Nilai: $score")
+    val studentId: String? = null
+    val idLength = studentId?.length ?: 0
+    println("Panjang ID: $idLength")
 }
 
 val grade = when (score) {
