@@ -11,3 +11,4 @@ fun main() {
     val score = 90
 
     println("Nama: $name, Nilai: $score")
+}
