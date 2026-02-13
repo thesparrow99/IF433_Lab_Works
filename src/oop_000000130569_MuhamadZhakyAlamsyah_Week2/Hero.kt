@@ -1,5 +1,7 @@
 package oop_000000130569_MuhamadZhakyAlamsyah_Week2
 
+import java.util.Scanner
+
 class Hero(
     val name: String,
     var hp: Int = 100,
@@ -26,39 +28,58 @@ class Hero(
 }
 
 fun main() {
+    val reader = Scanner(System.`in`)
 
-    println("=== TURN BASED TEXT GAME ===")
+    println("=== CREATE YOUR HERO ===")
+    print("Masukkan Nama Hero: ")
+    val inputName = reader.nextLine()
+    print("Masukkan Base Damage: ")
+    val inputDamage = reader.nextInt()
 
-    val hero1 = Hero("Knight", baseDamage = 25)
-    val hero2 = Hero("Orc", baseDamage = 20)
+    val myHero = Hero(inputName, baseDamage = inputDamage)
+    var enemyHp = 100
+    val enemyName = "Enemy"
 
-    println("\nBattle Start!\n")
+    println("\n=== BATTLE START! ===")
+    println("${myHero.name} vs $enemyName\n")
 
-    var turn = 1
+    while (myHero.isAlive() && enemyHp > 0) {
+        println("--- Status ---")
+        println("HP ${myHero.name}: ${myHero.hp}")
+        println("HP $enemyName: $enemyHp")
+        println("\nMenu:")
+        println("1. Serang")
+        println("2. Kabur")
+        print("Pilih aksi: ")
 
-    while (hero1.isAlive() && hero2.isAlive()) {
+        val choice = reader.nextInt()
 
-        println("----- TURN $turn -----")
+        if (choice == 1) {
+            myHero.attack(enemyName)
+            enemyHp -= myHero.baseDamage
+            if (enemyHp < 0) enemyHp = 0
+            println("HP $enemyName berkurang! Sisa HP: $enemyHp")
 
-        hero1.attack(hero2.name)
-        hero2.takeDamage(hero1.baseDamage)
-
-        if (!hero2.isAlive()) {
-            println("${hero2.name} telah kalah!")
+            if (enemyHp > 0) {
+                val enemyDamage = (10..20).random()
+                println("\n$enemyName membalas!")
+                myHero.takeDamage(enemyDamage)
+            }
+        } else if (choice == 2) {
+            println("\n${myHero.name} memilih untuk kabur dari medan tempur!")
             break
+        } else {
+            println("Pilihan tidak valid!")
         }
-
-        hero2.attack(hero1.name)
-        hero1.takeDamage(hero2.baseDamage)
-
-        if (!hero1.isAlive()) {
-            println("${hero1.name} telah kalah!")
-            break
-        }
-
-        turn++
         println()
     }
 
-    println("\n=== GAME OVER ===")
+    println("=== GAME OVER ===")
+    if (enemyHp <= 0) {
+        println("Selamat! ${myHero.name} menang!")
+    } else if (!myHero.isAlive()) {
+        println("Sayang sekali, ${myHero.name} telah gugur...")
+    } else {
+        println("Pertarungan berakhir karena melarikan diri.")
+    }
 }
