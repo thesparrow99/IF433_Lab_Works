@@ -1,4 +1,4 @@
-package oop_000000130569_MuhamadZhakyAlamsyah_Week2
+package oop_00000130569_MuhamadZhakyAlamsyah.Week_02
 
 import java.util.Scanner
 

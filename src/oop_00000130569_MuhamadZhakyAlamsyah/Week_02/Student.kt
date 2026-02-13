@@ -1,9 +1,9 @@
-package oop_000000130569_MuhamadZhakyAlamsyah_Week2
+package oop_00000130569_MuhamadZhakyAlamsyah.Week_02
 
 class Student(
     val name: String,
     val nim: String,
-    val major: String,
+    var major: String,
     var gpa: Double = 0.0
 ) {
 
