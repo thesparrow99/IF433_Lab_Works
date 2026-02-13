@@ -3,8 +3,8 @@ package oop_000000130569_MuhamadZhakyAlamsyah_Week2
 class Student(
     val name: String,
     val nim: String,
-    var gpa: Double = 0.0,
-    val major: String
+    val major: String,
+    var gpa: Double = 0.0
 ) {
 
     init {
