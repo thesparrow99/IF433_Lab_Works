@@ -19,8 +19,8 @@ class Weapon(val name: String) {
 
     val tier: String
         get() = when {
-            damage > 800 -> "AWW SAKIT BANGET"
-            damage > 500 -> "AW AW SAKIT"
-            else -> "b aja"
+            damage > 800 -> "MyticalSupremeOfWeapon"
+            damage > 500 -> "MasterOfWeapon"
+            else -> "Rookie"
         }
 }
