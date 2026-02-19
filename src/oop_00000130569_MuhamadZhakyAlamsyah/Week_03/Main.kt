@@ -10,4 +10,14 @@ fun main () {
     e.incrasePerformance()
 
     println("Pajak yang harus dibayar: ${e.tax}")
+
+    println("----- TEST WEAPON -----")
+
+    val w = Weapon("Excalibur")
+
+    w.damage = -50
+    w.damage = 9999
+
+    println("Damage akhir: ${w.damage}")
+    println("Tier: ${w.tier}")
 }
