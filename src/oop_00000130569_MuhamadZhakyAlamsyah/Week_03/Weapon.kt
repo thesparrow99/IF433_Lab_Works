@@ -1,6 +1,6 @@
 package oop_00000130569_MuhamadZhakyAlamsyah.Week_03
 
-class Weapon(val name: String) {
+class Weapon (val name: String) {
 
     var damage: Int = 0
         set(value) {

@@ -1,6 +1,6 @@
 package oop_00000130569_MuhamadZhakyAlamsyah.Week_03
 
-class Player(val username: String) {
+class Player (val username: String) {
 
     private var xp: Int = 0
 
