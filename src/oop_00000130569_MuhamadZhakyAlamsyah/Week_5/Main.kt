@@ -23,4 +23,12 @@ fun main() {
         }
         println("------------------")
     }
+    fun main() {
+        val helper = MathHelper()
+
+        println("--- HASIL TUGAS MANDIRI 1 ---")
+        println("Luas Persegi (sisi 5): ${helper.hitungLuas(5)}")
+        println("Luas Persegi Panjang (10x5): ${helper.hitungLuas(10, 5)}")
+        println("Luas Lingkaran (r=7.0): ${helper.hitungLuas(7.0)}")
+    }
 }
