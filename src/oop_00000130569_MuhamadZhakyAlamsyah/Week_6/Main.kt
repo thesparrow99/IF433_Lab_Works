@@ -9,7 +9,7 @@ fun main() {
     val myWatch = Smartwatch()
     myWatch.showTime()
 
-    val myphone = Smartphone()
+    val myPhone = Smartphone()
     myPhone.turnOn()
 
     val pay1 = Gopay()
@@ -18,4 +18,20 @@ fun main() {
     println("\n=== TESTING CHECKOUT ===")
     processCheckout(method = pay1, amount = 50000.0)
     processCheckout(method = pay2, amount = 150000.0)
+
+    println("\n=== TESTING SMART HOME SYSTEM ===")
+
+    val myHub = SmartHomeHub()
+
+    val lampuTamu = SmartLamp("L-001", "Ruang Tamu")
+    val googleNest = SmartSpeaker("S-001", "Google Nest Dapur")
+    val ezvizGarasi = SmartCCTV("C-001", "Ezviz Garasi")
+
+    myHub.addDevice(lampuTamu)
+    myHub.addDevice(googleNest)
+    myHub.addDevice(ezvizGarasi)
+
+    myHub.activateSecurityMode()
+
+    myHub.turnOffAllSwitches()
 }
