@@ -23,9 +23,9 @@ fun main() {
 
     val myHub = SmartHomeHub()
 
-    val lampuTamu = SmartLamp("L-001", "Ruang Tamu")
-    val googleNest = SmartSpeaker("S-001", "Google Nest Dapur")
-    val ezvizGarasi = SmartCCTV("C-001", "Ezviz Garasi")
+    val lampuTamu = SmartLamp("L-101", "Ruang Tamu")
+    val googleNest = SmartSpeaker("S-202", "Google Nest Dapur")
+    val ezvizGarasi = SmartCCTV("C-303", "Ezviz Garasi")
 
     myHub.addDevice(lampuTamu)
     myHub.addDevice(googleNest)
