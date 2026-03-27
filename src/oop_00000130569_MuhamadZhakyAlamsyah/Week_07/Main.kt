@@ -12,7 +12,10 @@ fun main() {
     val reg1 = RegularUser("Alice", 22)
     val reg2 = RegularUser("Alice", 22)
     println("Regular User: $reg1")
-    println("Regular Equality: ${reg1 == reg2}") // False
+    println("Regular Equality: ${reg1 == reg2}")
 
-
+    val data1 = DataUser("Alice", 22)
+    val data2 = DataUser("Alice", 22)
+    println("Data User: $data1")
+    println("Data Equality: ${data1 == data2}")
 }
