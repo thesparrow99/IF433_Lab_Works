@@ -1,4 +1,17 @@
-package oop_00000130569_MuhamadZhakyAlamsyah.Week_07
+package oop_001_johnthor.week07
 
-class NetworkClient {
+class NetworkClient private constructor(val url: String) {
+
+    companion object {
+        const val BASE_URL = "https://api.umn.ac.id" // Shared constant
+
+        fun createClient(): NetworkClient {
+            println("Membangun NetworkClient dengan BASE_URL: $BASE_URL")
+            return NetworkClient(BASE_URL)
+        }
+    }
+
+    fun connect() {
+        println("Connecting to $url...")
+    }
 }
