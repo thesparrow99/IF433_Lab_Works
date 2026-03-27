@@ -33,5 +33,8 @@ fun main() {
         ApiResponse.Loading -> "Loading..."
     }
     println(message)
-    }
+
+    println("\n=== TEST GAME MANAGER SINGLETON ===")
+    GameManager.startGame()
+    GameManager.startGame()
 }
