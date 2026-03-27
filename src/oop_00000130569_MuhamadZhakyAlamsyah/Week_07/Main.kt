@@ -25,10 +25,13 @@ fun main() {
     val (userName, userAge) = data1
     println("Destructured: $userName, $userAge")
 
-    val response: ApiResponse = ApiResponse.Success("Data berhasil ditarik!")
+    val response: ApiResponse = ApiResponse.Success("Data loaded!")
 
-    val uiMessage = when(response) {
-        is ApiResponse.Success -> "Tampilkan: ${response.data}"
-        is ApiResponse.Error -> "Munculkan alert: ${response.message}"
+    val message = when(response) {
+        is ApiResponse.Success -> "Success: ${response.data}"
+        is ApiResponse.Error -> "Error: ${response.message}"
+        ApiResponse.Loading -> "Loading..."
+    }
+    println(message)
     }
 }
