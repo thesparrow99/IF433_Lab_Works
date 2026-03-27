@@ -8,4 +8,11 @@ fun main() {
     println("\n=== TEST COMPANION OBJECT ===")
     val client = NetworkClient.createClient()
     client.connect()
+
+    val reg1 = RegularUser("Alice", 22)
+    val reg2 = RegularUser("Alice", 22)
+    println("Regular User: $reg1")
+    println("Regular Equality: ${reg1 == reg2}") // False
+
+
 }
