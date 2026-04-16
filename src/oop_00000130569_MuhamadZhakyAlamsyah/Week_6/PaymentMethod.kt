@@ -10,4 +10,3 @@ class Gopay : PaymentMethod {
 class CreditCard : PaymentMethod {
     override fun pay(amount: Double) { println("Contacting Bank for Rp$amount") }
     }
-}

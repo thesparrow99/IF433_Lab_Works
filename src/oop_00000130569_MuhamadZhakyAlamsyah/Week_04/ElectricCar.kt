@@ -7,6 +7,7 @@ class ElectricCar(
 ) : Car(brand, numberOfDoors) {
 
     final override fun accelerate() {
-        println("$brand berakselerasi dalam sunyi. Kapasitas baterai: $batteryCapacity%.")
+        speed += 20 // Akselerasi mobil listrik biasanya lebih cepat
+        println("$brand berakselerasi dalam sunyi. Kecepatan: $speed km/jam. Kapasitas baterai: $batteryCapacity%.")
     }
 }

@@ -1,26 +1,17 @@
-package oop_00000130569_MuhamadZhakyAlamsyah.Week_5
+package oop_00000130569_MuhamadZhakyAlamsyah.Week_04
 
-fun main() {
-    val dosen1 = Dosen(nama = "Pak Theo", nidn = "0123456")
-    val dosen2 = Dosen(nama = "Bu Siti" , nidn = "0123456")
+open class Car(brand: String, val numberOfDoors: Int) : Vehicle(brand) {
 
-    val admin1 = Admin(nama = "Budi")
+    fun openTrunk() {
+        println("Bagasi mobil $brand dengan $numberOfDoors pintu dibuka.")
+    }
 
-    val daftarPegawai: List<Pegawai> = listOf(dosen1, admin1)
+    override fun honk() {
+        println("TIN! TIN! Mobil $brand lewat!")
+    }
 
-    println("=== AKTIFITAS PEGAWAI ===")
-    for (pegawai in daftarPegawai) {
-        pegawai.bekerja()
-
-        when (pegawai) {
-            is Admin -> {
-                println("=> Terdeteksi sebagai Admin")
-                pegawai.doAdminWork()
-            }
-            is Dosen -> {
-                println("=> Terdeteksi sebagai Dosen")
-            }
-        }
-        println("------------------")
+    override fun accelerate() {
+        super.accelerate()
+        println("Mobil $brand menggunakan transmisi gigi untuk menambah kecepatan.")
     }
 }

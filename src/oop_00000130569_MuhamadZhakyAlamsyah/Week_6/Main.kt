@@ -7,7 +7,7 @@ fun processCheckout(method: PaymentMethod, amount: Double) {
 
 fun main() {
     val myWatch = Smartwatch()
-    myWatch.showTime()
+    myWatch.showtime()
 
     val myPhone = Smartphone()
     myPhone.turnOn()
