@@ -9,7 +9,6 @@ object DatabaseMock {
 fun runMockUnitTest() {
     println("\n=== RUNNING UNIT TEST ===")
     val testUser = DatabaseMock.findUser(1)
-
     val initial = testUser!!.name.substring(0, 1)
 
     check(initial == "T") { "Test Failed! Initial is wrong." }

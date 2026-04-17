@@ -2,7 +2,7 @@ package oop_00000130569_MuhamadZhakyAlamsyah.Week_08
 
 fun main() {
     println("=== TEST SAFE CALLS & ELVIS ===")
-    val emptyOrder = Order(null,null)
+    val emptyOrder = Order(null, null)
 
     val destination = emptyOrder.deliveryDetails?.address?.city?.name ?: "Kota Tidak Diketahui"
     println("Tujuan pengirim $destination")
@@ -10,7 +10,7 @@ fun main() {
     println("\n=== TEST LET BLOCK ===")
     val validOrder = Order(null, 250000)
 
-    val receipt = validOrder.totalPrice?.let { price ->
+    val receipt = validOrder.totalPrice?.let { price: Int ->
         val tax = price * 0.11
         "Transaksi Valid. Harga: Rp$price, Pajak: Rp$tax"
     } ?: "Transaksi Invalid: Harga belum di-set!"
@@ -28,7 +28,6 @@ fun main() {
 
     for (item in mixedData) {
         val text = item as? String
-
         text?.let {
             println("Ditemukan teks: ${it.uppercase()}")
         }
@@ -57,7 +56,6 @@ fun main() {
 
     println("\n=== TEST JAVA INTEROP ===")
     val javaResponse = LegacyJavaAPI.fetchServerStatus()
-
     val statusLength = javaResponse!!.length
     println("Status dari Java: $javaResponse (Length: $statusLength)")
 
