@@ -34,9 +34,7 @@ fun main() {
     println("\n=== WORST PERFORMERS ===")
     worstPerformersString.forEach { println(it) }
 
-    val winRate = if (closedTrades.isNotEmpty()) {
-        (winningTrades.size.toDouble() / closedTrades.size.toDouble()) * 100
-    } else {
-        0.0
-    }
+    val uniquePairs = tradeHistory
+        .map { it.pair }
+        .toSet()
 }
