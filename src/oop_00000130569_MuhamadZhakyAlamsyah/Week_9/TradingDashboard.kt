@@ -17,4 +17,6 @@ fun main() {
     println("Total Closed Trades: ${closedTrades.size}")
     println("Total Winning Trades: ${winningTrades.size}")
     winningTrades.forEach { println("Win: ${it.pair} | ROE: ${it.roe}%") }
+
+    val losingTrades = closedTrades.filter { it.roe <= 0 }
 }
