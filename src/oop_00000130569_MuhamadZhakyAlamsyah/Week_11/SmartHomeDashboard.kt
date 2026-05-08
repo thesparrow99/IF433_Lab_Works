@@ -17,4 +17,8 @@ fun main() {
         println("(LOG) Kamera terhubung")
         homeDevices.add(it)
     }
+    val acUnit = run {
+        val device = SmartDevice("Daikin Inverter (Kabel 3x2.5)", "HVAC", false, 800)
+        device // Menghasilkan (return) objek tersebut
+    }
 }
