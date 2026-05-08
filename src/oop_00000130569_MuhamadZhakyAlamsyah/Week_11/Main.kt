@@ -1,33 +1,18 @@
-package oop_00000130569_MuhamadZhakyAlamsyah.Week_11
+package oop_00000130569_muhamadzhakyalamsyah.week_11
 
 fun main(){
-    println("=== TEST EXTENTION FUNCTION ===")
-    println("Alex". addGreating())
-    println("Hi". repostTimes(3))
+    println("=== TEST EXTENSION FUNCTION ===")
+    println("Alex".addGreeting())
+    println("Hi".repostTimes(3))
 
     val text: String? = null
-    println("Apakah null/empty? ${text.isnullOfEmptyCustom()}")
+    // Menggunakan nama fungsi yang baru: isNullOrEmptyCustom
+    println("Apakah null/empty? ${text.isNullOrEmptyCustom()}")
 
     println("\n=== TEST RUN FUNCTION ===")
     val result = "Kotlin".run {
-        println("Memperoses kata: $this")
+        println("Memproses kata: $this")
         length * 2
     }
-    println("Hasil kalkulalsi run: $result")
-
-    fun main() {
-        println("=== TEST APPLY ===")
-        val user =User().apply {
-            name = "Alex"
-            age = 25
-        }
-        println(user)
-    }
-
-    println("\n=== TEST ALSO ===")
-    val numbers = mutableListOf(1, 2, 3)
-    numbers.also {
-        println("Log Sebelum ditambah$it")
-    }.add(4)
-    println("Setelah diitambah: $numbers")
+    println("Hasil kalkulasi run: $result")
 }
