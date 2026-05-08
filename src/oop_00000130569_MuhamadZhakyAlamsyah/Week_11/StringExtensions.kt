@@ -7,3 +7,7 @@ fun String.addGreating() : String {
 fun String.repostTimes(n: Int): String {
     return this.repeat(n)
 }
+
+fun String?.isnullOfEmptyCustom(): Boolean {
+    return this == null || this.isEmpty()
+}
