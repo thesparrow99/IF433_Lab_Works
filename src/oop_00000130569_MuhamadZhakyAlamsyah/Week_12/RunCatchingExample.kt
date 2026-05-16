@@ -13,4 +13,12 @@ fun main() {
     println("Recovered Value: $recovered")
 
     println()
+
+    runCatching {
+        "100".toInt()
+    }.onSuccess { v ->
+        println("Berhasil dikonversi: $v")
+    }.onFailure { e ->
+        println("Gagal konversi: ${e.message}")
+    }
 }
