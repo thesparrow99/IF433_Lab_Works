@@ -34,4 +34,5 @@ fun main() {
     } catch (e: Exception) {
         println("Caught General Error: ${e.message}")
     }
+    println("Siklus pengecekan dispenser pagi selesai.")
 }
