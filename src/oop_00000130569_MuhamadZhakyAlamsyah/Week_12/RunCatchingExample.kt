@@ -1,7 +1,16 @@
 package oop_00000130569_MuhamadZhakyAlamsyah.Week_12
 
-un main() {
+fun main() {
     println("=== TEST RUNCATCHING ===")
     val result: Result<Int> = runCatching {
         "42X".toInt()
     }
+
+    val safeValue = result.getOrElse { -1 }
+    println("Safe Value (getOrElse): $safeValue")
+
+    val recovered = result.recover { 0 }.getOrNull()
+    println("Recovered Value: $recovered")
+
+    println()
+}
