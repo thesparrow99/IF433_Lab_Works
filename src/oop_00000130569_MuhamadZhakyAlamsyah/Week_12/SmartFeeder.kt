@@ -1,9 +1,7 @@
 package oop_00000130569_MuhamadZhakyAlamsyah.Week_12
 
-
 fun dispenseKibble(requestedGram: Int, availableGram: Int, isJammed: Boolean): Int {
     require(requestedGram > 0) { "Porsi kibble harus lebih dari 0 gr" }
-    return availableGram
 
     if (isJammed) {
         throw DispenserJamException()
@@ -33,13 +31,11 @@ fun main() {
         println("Caught Error: ${e.message}")
     } catch (e: Exception) {
         println("Caught General Error: ${e.message}")
+    } finally {
+        println("Siklus pengecekan dispenser pagi selesai.")
     }
-    println("Siklus pengecekan dispenser pagi selesai.")
 
-    println("=== SIMULASI JADWAL MAKAN SORE ===")
-    runCatching {
-        dispenseKibble(requestedGram = 30, availableGram = 1000, isJammed = false)
-    }
+    println()
 
     println("=== SIMULASI JADWAL MAKAN SORE ===")
     runCatching {
