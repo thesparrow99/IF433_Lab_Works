@@ -35,4 +35,9 @@ fun main() {
         println("Caught General Error: ${e.message}")
     }
     println("Siklus pengecekan dispenser pagi selesai.")
+
+    println("=== SIMULASI JADWAL MAKAN SORE ===")
+    runCatching {
+        dispenseKibble(requestedGram = 30, availableGram = 1000, isJammed = false)
+    }
 }
