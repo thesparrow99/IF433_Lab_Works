@@ -59,4 +59,7 @@ fun main() {
     saveTrades(initialTrades, pathFile)
 
     File(pathFile).appendText("CORRUPT_ID,DOGEUSDT,Hold,XX,YY\n")
+
+    val loadedData = loadTrades(pathFile)
+    val totalPnl = loadedData.sumOf { it.pnl }
 }
