@@ -62,4 +62,11 @@ fun main() {
 
     val loadedData = loadTrades(pathFile)
     val totalPnl = loadedData.sumOf { it.pnl }
+
+    println("\n=== VALID TRADES BINANCE/BYBIT ACCORDING TO LOG ===")
+    loadedData.forEach { trade ->
+        println("ID: ${trade.id} | ${trade.symbol} (${trade.type}) | Margin: $${trade.margin} | PnL: $${trade.pnl}")
+    }
+
+    println("\n==== TOTAL PnL BERSIH: $totalPnl ====")
 }
